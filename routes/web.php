@@ -26,8 +26,8 @@ Route::get(
 
 Route::get(
     '/about',
-    fn () => view('about', ['links' => $links, 'name' => 'about'])
-)->name('about');
+    fn () => view('about')
+);
 
 Route::get(
     '/contact',
@@ -102,7 +102,10 @@ Route::get('/admin/{id}', function ($id, $name = null) {
 Route::get('users/{id}', function($id) {
     return "this page is profile for user $id";
 })->whereNumber('id');
+///// 26 may 2022
+Route::get('/timer' ,function (){
 
-Route::get('users/list', function() {
-    return "this page will show all users, imagine the list";
-});
+    return View('timer') ;
+}) ;
+
+    
