@@ -35,9 +35,10 @@ Route::get(
 )->name('contact');
 
 Route::get(
+
     '/dashboard',
     fn () => view('dashboard', ['links' => $links, 'name' => 'dashboard'])
-)->name('dashboard');
+)->name('dashboard');// khodam
 
 // Solution 1
 Route::get('/example/{a}/{b}/{c}', function ($a, $b, $c) {
